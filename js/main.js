@@ -234,13 +234,13 @@ function execute(deviceId, func, params) {
   // });
 
 
+//***********************************************************************************
+//TODO: Make sense of this...
+
 var deviceName = devices.reduce(function(previous, current, index, array){return array[index].id == deviceId ? array[index].name : null;});
 // invokes the same number of callbacks as per devices
-//todo...
 
-  // the device name is the reduced value of 
 
-  // if the 'de
 
   var row = $(
     '<tr><td><strong>' + deviceName + '-&gt;' + func + '</strong></td>' +
@@ -250,6 +250,8 @@ var deviceName = devices.reduce(function(previous, current, index, array){return
   );
 
   // i think this builds each row in the execution history table
+
+//**********************************************************************************
 
   $('#execution-history tbody').prepend(row);
   // adds a new row to the beginning of the execution history table
